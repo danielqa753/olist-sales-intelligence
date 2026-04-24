@@ -7,7 +7,7 @@
 -- Question: How did the business grow year over year?
 SELECT
     order_year,
-    COUNT(DISTINCT order_id)      AS total_orders,
+    SUM(total_orders)             AS total_orders,
     ROUND(SUM(gross_revenue), 2)  AS total_revenue,
     ROUND(AVG(avg_order_value), 2) AS avg_order_value
 FROM vw_monthly_revenue
